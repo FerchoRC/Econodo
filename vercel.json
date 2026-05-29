@@ -3,7 +3,12 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/auth/:path*",     "destination": "https://sharkbyte-api-dev.onrender.com/auth/:path*" },
+    { "source": "/api/:path*",      "destination": "https://sharkbyte-api-dev.onrender.com/api/:path*" },
+    { "source": "/health",          "destination": "https://sharkbyte-api-dev.onrender.com/health" },
+    { "source": "/internal/:path*", "destination": "https://sharkbyte-api-dev.onrender.com/internal/:path*" },
+    { "source": "/webhooks/:path*", "destination": "https://sharkbyte-api-dev.onrender.com/webhooks/:path*" },
+    { "source": "/(.*)",            "destination": "/index.html" }
   ],
   "headers": [
     {
